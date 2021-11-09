@@ -1,4 +1,4 @@
-package br.com.nasan.citiesapi.countries;
+package br.com.nasan.citiesapi.countries.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

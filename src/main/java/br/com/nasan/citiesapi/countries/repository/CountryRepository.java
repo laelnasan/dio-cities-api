@@ -2,7 +2,7 @@ package br.com.nasan.citiesapi.countries.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.nasan.citiesapi.countries.Country;
+import br.com.nasan.citiesapi.countries.entity.Country;
 
 /**
  * CountryRepository
