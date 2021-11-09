@@ -1,0 +1,12 @@
+package br.com.nasan.citiesapi.countries.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.com.nasan.citiesapi.countries.Country;
+
+/**
+ * CountryRepository
+ */
+public interface CountryRepository extends JpaRepository<Country, Long> {
+
+}
