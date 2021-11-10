@@ -3,7 +3,11 @@ package br.com.nasan.citiesapi.cities.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import br.com.nasan.citiesapi.states.entity.State;
 
 /**
  * City
@@ -17,8 +21,9 @@ public class City {
   @Column(name = "nome")
   private String name;
 
-  @Column(name = "uf")
-  private Integer state;
+  @ManyToOne
+  @JoinColumn(name = "uf", referencedColumnName = "id")
+  private State state;
 
   @Column(name = "cod_tom")
   private Integer code;
@@ -40,7 +45,7 @@ public class City {
     return name;
   }
 
-  public Integer getState() {
+  public State getState() {
     return state;
   }
 

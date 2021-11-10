@@ -8,11 +8,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
+
+import br.com.nasan.citiesapi.countries.entity.Country;
 
 /**
  * State
@@ -32,8 +36,9 @@ public class State {
   @Column(name = "uf")
   private String code;
 
-  @Column(name = "pais")
-  private Long countryId;
+  @ManyToOne
+  @JoinColumn(name = "pais", referencedColumnName = "id")
+  private Country country;
 
   private Integer ibge;
 
@@ -61,8 +66,8 @@ public class State {
     return ibge;
   }
 
-  public Long getCountryId() {
-    return countryId;
+  public Country getCountryId() {
+    return country;
   }
 
   public List<Integer> getDdd() {
