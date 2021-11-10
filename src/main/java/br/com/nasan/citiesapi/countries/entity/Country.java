@@ -18,7 +18,7 @@ public class Country {
   private String name;
 
   @Column(name = "nome_pt")
-  private String name_pt;
+  private String namePortuguese;
 
   @Column(name = "sigla")
   private String code;
@@ -36,8 +36,8 @@ public class Country {
     return name;
   }
 
-  public String getName_pt() {
-    return name_pt;
+  public String getNamePortuguese() {
+    return namePortuguese;
   }
 
   public String getCode() {
