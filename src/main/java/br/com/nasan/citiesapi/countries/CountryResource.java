@@ -22,7 +22,7 @@ class CountryResource {
   private CountryRepository repository;
 
   @GetMapping
-  public Page<Country> countries(Pageable page) {
+  public Page<Country> getPage(Pageable page) {
     return repository.findAll(page);
   }
 

@@ -22,7 +22,7 @@ class StateResource {
   private StateRepository repository;
 
   @GetMapping
-  public Page<State> countries(Pageable page) {
+  public Page<State> getPage(Pageable page) {
     return repository.findAll(page);
   }
 
