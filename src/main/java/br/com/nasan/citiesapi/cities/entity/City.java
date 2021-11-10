@@ -7,6 +7,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
+import org.hibernate.annotations.TypeDefs;
+import org.springframework.data.geo.Point;
+
 import br.com.nasan.citiesapi.states.entity.State;
 
 /**
@@ -14,6 +19,9 @@ import br.com.nasan.citiesapi.states.entity.State;
  */
 @Entity
 @Table(name = "cidade")
+@TypeDefs(value = {
+    @TypeDef(name = "point", typeClass = PointType.class)
+})
 public class City {
   @Id
   private long id;
@@ -33,6 +41,10 @@ public class City {
   private double latitude;
 
   private double longitude;
+
+  @Type(type = "point")
+  @Column(name = "lat_lon")
+  private Point location;
 
   public City() {
   } // empty constructor
@@ -63,6 +75,10 @@ public class City {
 
   public double getLongitude() {
     return longitude;
+  }
+
+  public Point getLocation() {
+    return location;
   }
 
 }
