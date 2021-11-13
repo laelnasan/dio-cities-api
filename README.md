@@ -11,17 +11,18 @@ Minha primeira vez também com o Gradle, achei bem prático de usar, principalme
 suporte do Spring boot, mas devo olhar também o Maven para entender direito como funciona.
 
 ## Endpoints
-### /countries
+### GET /countries
 Retorna um json paginado contendo as informações de países cadastrados
-### /states
+### GET /states
 Retorna um json paginado contendo as informações de estados brasileiros cadastrados.
-### /cities
+### GET /cities
 Retorna um json paginado contendo as informações de cidades brasileiras cadastradas (localização inclusa).
 
-### /countries/{id}; /states/{id}; /cities/{id}
+### GET /countries/{id}; /states/{id}; /cities/{id}
 Se id for passado no método GET, retorna um json contendo o conteúdo da entrada.
 
-### /cities/{id}/distance-to/{toId}
+### GET /cities/{id}/distance-to/{toId}
+Parametro opcional: showcities=true -> inlcui informações das cidades.
 retorna a distância em milhas entra as cidades.
 
 ## Instância no heroku
