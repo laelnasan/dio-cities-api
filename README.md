@@ -10,7 +10,7 @@ Vou procurar entender como se dá esse interfaceamento em bancos não relacionai
 Minha primeira vez também com o Gradle, achei bem prático de usar, principalmente pelo
 suporte do Spring boot, mas devo olhar também o Maven para entender direito como funciona.
 
-## Serviços
+## Endpoints
 ### /countries
 Retorna um json paginado contendo as informações de países cadastrados
 ### /states
